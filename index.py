@@ -1,5 +1,5 @@
 # print('Hello World!')
-age = 25
+# age = 25
 # first_name= "kifirotoyyu"
 # print(age)
 # name = input("Please Enter your name:")
