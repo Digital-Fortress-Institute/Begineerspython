@@ -172,9 +172,9 @@ fruit = ['grape', 'apple', 'mango', 'banana', 'coconut', 'pineapple']
 # my_strings = str()
 # print(len(my_strings))
 # print(type(my_strings))
-string1 = 'Pohn is a python eveJloper'
-y = string1.split()
-# print(y)
+# string1 = 'Pohn is a python eveJloper'
+# y = string1.split()
+# # print(y)
 # y.reverse()
 # print(y)
 # for x in y:
@@ -544,6 +544,95 @@ print(my_var[2][1][2][1][0])
 # print(x)
 # y=tuple(x)
 # print(y)
+
+
+# functions
+# def my_class():
+#     print("Hello world")
+# my_class()
+# my_class()
+# my_class()
+# my_class()
+# my_class()
+
+# def tunde():
+#     num1 = int(input("Enter your first number"))
+#     num2 = int(input("Enter your second number"))
+#     print(f'{num1} + {num2} = {num1 + num2}')
+# tunde()
+
+
+# def pytho_class(name):
+#     return f'My name is {name}'
+
+# print(pytho_class("Tunde"))
+# print(pytho_class("Prosper"))
+# print(pytho_class("Pelumi"))
+
+
+# def sum_class(x, y):
+#     return f'{x} + {y} = {x + y}'
+
+
+# print(sum_class(30, 60))
+
+# def my_function():
+#     name=input('Enter your full name')
+#     print(name[0:5])
+# my_function()
+
+# def my_address():
+#     address = input('Enter your address')
+#     x=address.split(' ')
+#     print(x.pop())
+#     # address.pop()
+
+# my_address()
+
+# def welcome(x):
+#     # try:
+#         return x / 0
+#     except Exception as w:
+#         return w
+    # except ValueError:
+    #     print("String can not be evaluated")
+    # except ZeroDivisionError:
+    #     print("Number cannot be divided by zero")
+    # except TypeError:
+    #     print("Please enter a valid number")
+    
+
+# print(welcome(20))
+# print('Programme successfully executed')
+
+
+def my_score():
+    
+        score = 0
+        try:
+            score = int(input("Enter your score"))
+        except Exception as e:
+             return e
+        except ValueError:
+            print("Enter a valid number")
+        except TypeError:
+            print("Make it a number")
+        match score:
+            case score if 90 <= score <= 100:
+                print("Excellent")
+            case score if 70 <= score <= 89:
+                print("Good Result")
+            case score if 40 <= score <= 69:
+                print("Grade C")
+            case score if 30 <= score <= 39:
+                print("Fail")
+            case score:
+                print("Unknown")
+
+my_score()
+print('successfull')
+
+
 
 
 
