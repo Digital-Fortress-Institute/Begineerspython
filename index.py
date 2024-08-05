@@ -606,31 +606,100 @@ print(my_var[2][1][2][1][0])
 # print('Programme successfully executed')
 
 
-def my_score():
+# def my_score():
     
-        score = 0
-        try:
-            score = int(input("Enter your score"))
-        except Exception as e:
-             return e
-        except ValueError:
-            print("Enter a valid number")
-        except TypeError:
-            print("Make it a number")
-        match score:
-            case score if 90 <= score <= 100:
-                print("Excellent")
-            case score if 70 <= score <= 89:
-                print("Good Result")
-            case score if 40 <= score <= 69:
-                print("Grade C")
-            case score if 30 <= score <= 39:
-                print("Fail")
-            case score:
-                print("Unknown")
+#         score = 0
+#         try:
+#             score = int(input("Enter your score"))
+#         except Exception as e:
+#              return e
+#         except ValueError:
+#             print("Enter a valid number")
+#         except TypeError:
+#             print("Make it a number") 
+#         match score:
+#             case score if 90 <= score <= 100:
+#                 print("Excellent")
+#             case score if 70 <= score <= 89:
+#                 print("Good Result")
+#             case score if 40 <= score <= 69:
+#                 print("Grade C")
+#             case score if 30 <= score <= 39:
+#                 print("Fail")
+#             case score:
+#                 print("Unknown")
 
-my_score()
-print('successfull')
+# my_score()
+# print('successfull')
+
+print("Welcome to Zenith Bank PLC")
+name = input('Enter your name: ')
+gender = input("Enter your gender (M for male and F for female)")
+if gender.upper() == 'M':
+    print(f'Good day Mr {name}')
+else:
+    print(f"good day Miss/Mrs {name}")
+pin=1234
+
+try:
+    my_pin = int(input('Please enter your pin: '))
+    if my_pin == pin:
+        print('Welcome')
+    else:
+        print('Your pin is invalid')
+        quit()
+except ValueError:
+    print('This value must be an interger value')
+    quit()
+
+
+balance = 0
+while True:
+    choice = input('''
+        B is to check for balance
+        D is to deposite fund/money
+        w is to withdraw money
+        Q is to quit
+    ''')
+    if choice.upper() == 'B':
+        print(f"Your current balance is {balance}")
+    elif choice.upper() == 'D':
+        try:
+            amount= int(input("Enter your amount of deposite: "))
+            if amount <= 0:
+                print("Invalid Transaction")
+            else:
+                balance += amount
+                print(f"Your transaction was successfull and your current balance is {balance}")
+        except ValueError:
+            print("Must be an interger value")
+            
+    elif choice.upper() == "W":
+        try:
+            amount=int(input('Enter amount to0 withdraw:  '))
+            if amount > balance:
+                print("Insufficient fund")
+            elif amount <= 0:
+                print('Invalid Transaction')
+            else:
+                balance -= amount
+                print(f"Your transaction is successfull and your current balance is {balance}")
+        except ValueError:
+            print("This must be and interger value")
+    elif choice.upper() == 'Q':
+        question = input("Would you like to perform another transaction  (Y/N)")
+        if question.upper() == "Y":
+            continue
+        else:
+            print("Thanks for you patronage we hope to see you some other time")
+            break
+
+    else:
+        print("Your Entry is Invalid please try again")
+        # quit()
+     
+
+
 
 
 
