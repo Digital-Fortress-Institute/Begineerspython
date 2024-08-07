@@ -200,9 +200,9 @@ fruit = ['grape', 'apple', 'mango', 'banana', 'coconut', 'pineapple']
 # print(f'{string1} {string2}')
 
 
-my_var = [10, 30, ['digital', ['fortress', 'software devgelopment',['data analysis', ['mango'], 'banana'], 'water melon'], 'frontend'], 50, 70, 90]
-print(my_var[2][1][2][1][0])
-# print(my_var[5])
+# my_var = [10, 30, ['digital', ['fortress', 'software devgelopment',['data analysis', ['mango'], 'banana'], 'water melon'], 'frontend'], 50, 70, 90]
+# print(my_var[2][1][2][1][0])
+# # print(my_var[5])
 # print(my_var[2][0])
 # print(my_var[2][1][3])
 # print(my_var[2][2])
@@ -632,71 +632,86 @@ print(my_var[2][1][2][1][0])
 # my_score()
 # print('successfull')
 
-print("Welcome to Zenith Bank PLC")
-name = input('Enter your name: ')
-gender = input("Enter your gender (M for male and F for female)")
-if gender.upper() == 'M':
-    print(f'Good day Mr {name}')
-else:
-    print(f"good day Miss/Mrs {name}")
-pin=1234
+# print("Welcome to Zenith Bank PLC")
+# name = input('Enter your name: ')
+# gender = input("Enter your gender (M for male and F for female)")
+# if gender.upper() == 'M':
+#     print(f'Good day Mr {name}')
+# else:
+#     print(f"good day Miss/Mrs {name}")
+# pin=1234
 
-try:
-    my_pin = int(input('Please enter your pin: '))
-    if my_pin == pin:
-        print('Welcome')
-    else:
-        print('Your pin is invalid')
-        quit()
-except ValueError:
-    print('This value must be an interger value')
-    quit()
+# try:
+#     my_pin = int(input('Please enter your pin: '))
+#     if my_pin == pin:
+#         print('Welcome')
+#     else:
+#         print('Your pin is invalid')
+#         quit()
+# except ValueError:
+#     print('This value must be an interger value')
+#     quit()
 
 
-balance = 0
-while True:
-    choice = input('''
-        B is to check for balance
-        D is to deposite fund/money
-        w is to withdraw money
-        Q is to quit
-    ''')
-    if choice.upper() == 'B':
-        print(f"Your current balance is {balance}")
-    elif choice.upper() == 'D':
-        try:
-            amount= int(input("Enter your amount of deposite: "))
-            if amount <= 0:
-                print("Invalid Transaction")
-            else:
-                balance += amount
-                print(f"Your transaction was successfull and your current balance is {balance}")
-        except ValueError:
-            print("Must be an interger value")
+# balance = 0
+# while True:
+#     choice = input('''
+#         B is to check for balance
+#         D is to deposite fund/money
+#         w is to withdraw money
+#         Q is to quit
+#     ''')
+#     if choice.upper() == 'B':
+#         print(f"Your current balance is {balance}")
+#     elif choice.upper() == 'D':
+#         try:
+#             amount= int(input("Enter your amount of deposite: "))
+#             if amount <= 0:
+#                 print("Invalid Transaction")
+#             else:
+#                 balance += amount
+#                 print(f"Your transaction was successfull and your current balance is {balance}")
+#         except ValueError:
+#             print("Must be an interger value")
             
-    elif choice.upper() == "W":
-        try:
-            amount=int(input('Enter amount to0 withdraw:  '))
-            if amount > balance:
-                print("Insufficient fund")
-            elif amount <= 0:
-                print('Invalid Transaction')
-            else:
-                balance -= amount
-                print(f"Your transaction is successfull and your current balance is {balance}")
-        except ValueError:
-            print("This must be and interger value")
-    elif choice.upper() == 'Q':
-        question = input("Would you like to perform another transaction  (Y/N)")
-        if question.upper() == "Y":
-            continue
-        else:
-            print("Thanks for you patronage we hope to see you some other time")
-            break
+#     elif choice.upper() == "W":
+#         try:
+#             amount=int(input('Enter amount to0 withdraw:  '))
+#             if amount > balance:
+#                 print("Insufficient fund")
+#             elif amount <= 0:
+#                 print('Invalid Transaction')
+#             else:
+#                 balance -= amount
+#                 print(f"Your transaction is successfull and your current balance is {balance}")
+#         except ValueError:
+#             print("This must be and interger value")
+#     elif choice.upper() == 'Q':
+#         question = input("Would you like to perform another transaction  (Y/N)")
+#         if question.upper() == "Y":
+#             continue
+#         else:
+#             print("Thanks for you patronage we hope to see you some other time")
+#             break
 
-    else:
-        print("Your Entry is Invalid please try again")
+#     else:
+#         print("Your Entry is Invalid please try again")
         # quit()
+    
+
+# anonymous lambda
+
+# x = lambda tunde: tunde + 10
+# print(x(3))
+
+# x = lambda w, t: w + t
+# print(x(10, 20))
+
+def tunde(x):
+    return lambda a: a * x
+myfunc= tunde(4)
+print(myfunc(20))
+
      
 
 
