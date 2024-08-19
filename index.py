@@ -707,12 +707,140 @@ fruit = ['grape', 'apple', 'mango', 'banana', 'coconut', 'pineapple']
 # x = lambda w, t: w + t
 # print(x(10, 20))
 
-def tunde(x):
-    return lambda a: a * x
-myfunc= tunde(4)
-print(myfunc(20))
+# def tunde(x):
+#     return lambda a: a * x
+# myfunc= tunde(4)
+# print(myfunc(20))
 
-     
+
+# module
+# def tunde(x):
+#     return x ** 2
+
+# file handling
+
+# myfile = open('demo.txt', 'a')
+# myfile.write('Welcome to python class')
+# myfile.close()
+
+# x = open('demo.txt', 'r')
+# print(x.read())
+
+# import datetime
+
+# x = datetime.datetime.now()
+# print(x.time())
+
+
+# OOP
+
+
+class Person:
+    def __init__(self, name, age, ):
+        self.name = name
+        self.age = age
+
+
+    def __str__(self):
+        return f' My name is {self.name}  and  I am {self.age} years old'
+    
+    # def myself(self):
+    #     return f'Mr {self.name} is currently seeking for an employment , he is {self.age} years'
+
+# pers0n1 = Person('Emeka', 10)
+# print(pers0n1)
+
+
+# class Employee(Person):
+#     def __init__(self, name, age, email, dob, job_title):
+#         super().__init__(name, age)
+#         self.dob = dob
+#         self.email = email
+#         self.job_title = job_title
+
+#     def __str__(self):
+#         return f'{self.name} {self.age} {self.email} {self.dob} {self.job_title}'
+    
+#     def get_name(self):
+#         return f"My name is {self.name}"
+
+# pers0n1 = Employee('Emeka', 10, 'emeka@gmail.com', 1992, 'python developer')
+# print(pers0n1.get_name())
+
+# # person1 = Person('Titi', 10)
+# # print(person1)
+# x = Employee('Emake', 20, 'emaka@gmail.com', '13, August 2024', 'python developer')
+# print(x.get_name())
+
+
+
+
+class Lorry:
+    def __init__(self, brand, color, size):
+        self.brand = brand
+        self.color = color
+        self.size = size
+
+    def __str__(self):
+        return f'The brand of the lorry is {self.brand} which has the color of {self.color} and it is {self.size} long'
+
+
+class Driver(Lorry):
+    def __init__(self, brand, color, size, name, city, qualification, experience):
+        super().__init__(brand, color, size)
+        self.name = name
+        self.city = city
+        self.qualification = qualification
+        self.experience = experience
+
+    def __str__(self):
+        return f'The brand of the lorry is {self.brand} which has the color of {self.color} and it is {self.size} long The company has just employ a new driver whose name is  {self.name} he hails from the city of {self.city}, his qualification is {self.qualification} with {self.experience} of experience'
+
+
+# first_lorry= Lorry('DAF', 'Silver', '40ft')
+new_driver = Driver('DAF', 'Silver', '40ft', 'Emeka', 'Abia','HND in Logistic', 10 )
+print(new_driver)
+
+        
+
+class Car:
+    def __init__(self, model, name, year):
+        self.model=model
+        self.name = name
+        self.year = year
+    def tunde(self):
+        return("Drive")
+    def my_machine(self):
+        return f'{self.model} {self.name} {self.year}'
+class Boat:
+    def __init__(self, model, name, year):
+        self.model=model
+        self.name = name
+        self.year = year
+    def tunde(self):
+        return("Swim")
+    def my_machine(self):
+        return f'{self.model} {self.name} {self.year}'
+
+class Plane:
+    def __init__(self, model, name, year):
+        self.model=model
+        self.name = name
+        self.year = year
+    def tunde(self):
+        return("Fly")
+    def my_machine(self):
+        return f'{self.model} {self.name} {self.year}'
+    
+first_car = Car('Camry', 'Toyota', 2022)
+# print(first_car.my_machine())
+first_boat = Boat('Fly-ng Boat', 'Benz', 2002)
+# print(first_boat.my_machine())
+first_plane = Plane('Jet', 'Bugatti', 2024)
+# print(first_plane.my_machine())
+
+for x in ( first_boat, first_car, first_plane ):
+   print( x.tunde())
 
 
 
