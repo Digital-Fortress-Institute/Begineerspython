@@ -775,72 +775,145 @@ class Person:
 
 
 
-class Lorry:
-    def __init__(self, brand, color, size):
-        self.brand = brand
-        self.color = color
-        self.size = size
+# class Lorry:
+#     def __init__(self, brand, color, size):
+#         self.brand = brand
+#         self.color = color
+#         self.size = size
 
-    def __str__(self):
-        return f'The brand of the lorry is {self.brand} which has the color of {self.color} and it is {self.size} long'
-
-
-class Driver(Lorry):
-    def __init__(self, brand, color, size, name, city, qualification, experience):
-        super().__init__(brand, color, size)
-        self.name = name
-        self.city = city
-        self.qualification = qualification
-        self.experience = experience
-
-    def __str__(self):
-        return f'The brand of the lorry is {self.brand} which has the color of {self.color} and it is {self.size} long The company has just employ a new driver whose name is  {self.name} he hails from the city of {self.city}, his qualification is {self.qualification} with {self.experience} of experience'
+#     def __str__(self):
+#         return f'The brand of the lorry is {self.brand} which has the color of {self.color} and it is {self.size} long'
 
 
-# first_lorry= Lorry('DAF', 'Silver', '40ft')
-new_driver = Driver('DAF', 'Silver', '40ft', 'Emeka', 'Abia','HND in Logistic', 10 )
-print(new_driver)
+# class Driver(Lorry):
+#     def __init__(self, brand, color, size, name, city, qualification, experience):
+#         super().__init__(brand, color, size)
+#         self.name = name
+#         self.city = city
+#         self.qualification = qualification
+#         self.experience = experience
+
+#     def __str__(self):
+#         return f'The brand of the lorry is {self.brand} which has the color of {self.color} and it is {self.size} long The company has just employ a new driver whose name is  {self.name} he hails from the city of {self.city}, his qualification is {self.qualification} with {self.experience} of experience'
+
+
+# # first_lorry= Lorry('DAF', 'Silver', '40ft')
+# new_driver = Driver('DAF', 'Silver', '40ft', 'Emeka', 'Abia','HND in Logistic', 10 )
+# print(new_driver)
 
         
 
-class Car:
-    def __init__(self, model, name, year):
-        self.model=model
-        self.name = name
-        self.year = year
-    def tunde(self):
-        return("Drive")
-    def my_machine(self):
-        return f'{self.model} {self.name} {self.year}'
-class Boat:
-    def __init__(self, model, name, year):
-        self.model=model
-        self.name = name
-        self.year = year
-    def tunde(self):
-        return("Swim")
-    def my_machine(self):
-        return f'{self.model} {self.name} {self.year}'
+# class Car:
+#     def __init__(self, model, name, year):
+#         self.model=model
+#         self.name = name
+#         self.year = year
+#     def tunde(self):
+#         return("Drive")
+#     def my_machine(self):
+#         return f'{self.model} {self.name} {self.year}'
+# class Boat:
+#     def __init__(self, model, name, year):
+#         self.model=model
+#         self.name = name
+#         self.year = year
+#     def tunde(self):
+#         return("Swim")
+#     def my_machine(self):
+#         return f'{self.model} {self.name} {self.year}'
 
-class Plane:
-    def __init__(self, model, name, year):
-        self.model=model
-        self.name = name
-        self.year = year
-    def tunde(self):
-        return("Fly")
-    def my_machine(self):
-        return f'{self.model} {self.name} {self.year}'
+# class Plane:
+#     def __init__(self, model, name, year):
+#         self.model=model
+#         self.name = name
+#         self.year = year
+#     def tunde(self):
+#         return("Fly")
+#     def my_machine(self):
+#         return f'{self.model} {self.name} {self.year}'
     
-first_car = Car('Camry', 'Toyota', 2022)
-# print(first_car.my_machine())
-first_boat = Boat('Fly-ng Boat', 'Benz', 2002)
-# print(first_boat.my_machine())
-first_plane = Plane('Jet', 'Bugatti', 2024)
-# print(first_plane.my_machine())
+# first_car = Car('Camry', 'Toyota', 2022)
+# # print(first_car.my_machine())
+# first_boat = Boat('Fly-ng Boat', 'Benz', 2002)
+# # print(first_boat.my_machine())
+# first_plane = Plane('Jet', 'Bugatti', 2024)
+# # print(first_plane.my_machine())
 
-for x in ( first_boat, first_car, first_plane ):
-   print( x.tunde())
+# for x in ( first_boat, first_car, first_plane ):
+#    print( x.tunde())
+
+from tkinter import *
+# root = Tk()
+# mylabel = Label(root, text='Hello World')
+# root.geometry('600x600')
+# mylabel.pack()
+# root.mainloop()
+
+
+# root= Tk()
+# mylabel1 = Label(root, text='Welcome to our GUI interface')
+# mylabel2 = Label(root, text="we are in Digital Fortress")
+# mylabel3 = Label (root, text="We are learning with python")
+# root.geometry('400x500')
+
+# # mylabel1.pack()
+# # mylabel2.pack()
+# # mylabel3.pack()
+
+# mylabel1.grid(row=0, column=0)
+# mylabel2.grid(row=0, column=2)
+# mylabel3.grid(row=0, column=3)
+# root.mainloop()
+
+# root= Tk()
+# root.geometry('300x200')
+
+# def my_click():
+#     mylabel = Label(root, text='You just clicked me')
+#     mylabel.pack()
+# mybutton = Button(root, text='Click Me', fg='blue', bg='green', command=my_click)
+# mybutton.pack()
+# root.mainloop()
+
+# root= Tk()
+# my_input= Entry(root, width=50, bg='blue', borderwidth=5)
+# my_input.insert(0, "Enter your name")
+# my_input.pack()
+# def my_click():
+#     hello = "Hello " +my_input.get()
+#     my_label = Label(root, text=hello)
+#     my_label.pack()
+# mybutton = Button(root, text='Click Me', fg='blue', bg='green', command=my_click)
+# mybutton.pack()
+# root.mainloop()
+
+root = Tk()
+root.geometry('600x400')
+first_name = Label(root, text="First Name")
+first_name_input = Entry(root, width=50, bg='white', borderwidth=5)
+
+last_name = Label(root, text="Last Name")
+last_name_input = Entry(root, width=50, bg='white', borderwidth=5)
+
+
+phone_number = Label(root, text="Phone Number")
+phone_number_input = Entry(root, width=50, bg='white', borderwidth=5)
+
+first_name.grid(row=0, column=0)
+first_name_input.grid(row=0, column=1)
+
+last_name.grid(row=1, column=0)
+last_name_input.grid(row=1, column=1)
+
+phone_number.grid(row=2, column=0 )
+phone_number_input.grid(row=2, column=1 )
+
+
+root.mainloop()
+
+
+
+
 
 
 
