@@ -843,6 +843,7 @@ class Person:
 #    print( x.tunde())
 
 from tkinter import *
+import sqlite3
 # root = Tk()
 # mylabel = Label(root, text='Hello World')
 # root.geometry('600x600')
@@ -887,29 +888,108 @@ from tkinter import *
 # mybutton.pack()
 # root.mainloop()
 
-root = Tk()
-root.geometry('600x400')
-first_name = Label(root, text="First Name")
-first_name_input = Entry(root, width=50, bg='white', borderwidth=5)
+# root = Tk()
+# root.geometry('600x400')
+# first_name = Label(root, text="First Name")
+# first_name_input = Entry(root, width=50, bg='white', borderwidth=5)
 
-last_name = Label(root, text="Last Name")
-last_name_input = Entry(root, width=50, bg='white', borderwidth=5)
-
-
-phone_number = Label(root, text="Phone Number")
-phone_number_input = Entry(root, width=50, bg='white', borderwidth=5)
-
-first_name.grid(row=0, column=0)
-first_name_input.grid(row=0, column=1)
-
-last_name.grid(row=1, column=0)
-last_name_input.grid(row=1, column=1)
-
-phone_number.grid(row=2, column=0 )
-phone_number_input.grid(row=2, column=1 )
+# last_name = Label(root, text="Last Name")
+# last_name_input = Entry(root, width=50, bg='white', borderwidth=5)
 
 
-root.mainloop()
+# phone_number = Label(root, text="Phone Number")
+# phone_number_input = Entry(root, width=50, bg='white', borderwidth=5)
+
+# first_name.grid(row=0, column=0)
+# first_name_input.grid(row=0, column=1)
+
+# last_name.grid(row=1, column=0)
+# last_name_input.grid(row=1, column=1)
+
+# phone_number.grid(row=2, column=0 )
+# phone_number_input.grid(row=2, column=1 )
+
+
+# root.mainloop()
+
+from tkinter import *
+import sqlite3
+from tkinter import messagebox
+def creat_table():
+    con = sqlite3.connect('wisdom_class.db')
+    coursor = con.cursor()
+    coursor.execute("""
+            CREATE TABLE IF NOT EXISTS tunde(
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                email TEXT NOT NULL,
+                password TEXT NOT NULL
+                    )
+
+""") 
+    con.commit()
+    con.close()
+
+def save_credientials():
+    email = email_entry.get()
+    password = password_entry.get()
+    if email and password:
+        con= sqlite3.connect('wisdom_class.db')
+        cursor=con.cursor()
+        cursor.execute('INSERT INTO tunde (email, password) VALUES(?, ?)', (email, password))
+        con.commit()
+        con.close()
+        messagebox.showinfo('Success', "Credentials succefully saved")
+    else:
+        messagebox.showwarning('Error', "Credentials not succefully saved")
+
+
+def display_credientials():
+    con= sqlite3.connect('wisdom_class.db')
+    cursor=con.cursor()
+    cursor.execute('SELECT * FROM tunde')
+    data = cursor.fetchall()
+    con.close()
+
+    if data:
+        result.delete(0, END)
+        for i in data:
+            result.insert(END, f'Email: {i[1]}\n Password: {i[2]}\n\n')
+    else:
+        result.delete(1.0, END)
+        result.insert(END, 'No Message Found')
+
+
+
+
+
+
+
+window =Tk()
+window.title('Email and password management')
+window.geometry('600x500')
+creat_table()
+
+email_value = Label(window, text="Email")
+email_value.grid(row=0, column=0)
+
+email_entry = Entry(window)
+email_entry.grid(row=0, column=1)
+
+password = Label(window, text='Password')
+password.grid(row=1, column=0)
+
+password_entry = Entry(window, show='*')
+password_entry.grid(row=1, column=1)
+
+button = Button(window, text='Save Credientials', command=save_credientials)
+button.grid(row=3, column=1)
+
+mybutton = Button(window, text='Display Credientials', command=display_credientials)
+mybutton.grid(row=4, column=1)
+
+result = Text(window, height=10, width=40)
+result.grid(row=5, column=1)
+window.mainloop()
 
 
 
