@@ -951,7 +951,7 @@ def display_credientials():
     con.close()
 
     if data:
-        result.delete(0, END)
+        result.delete(1.0, END)
         for i in data:
             result.insert(END, f'Email: {i[1]}\n Password: {i[2]}\n\n')
     else:
