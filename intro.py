@@ -34,7 +34,7 @@
 # set
 #boolean
 
-address = '47, Herbert Macauly Way, Off \'University\' Road, Akoka Yaba Lagos State'
+# address = '47, Herbert Macauly Way, Off \'University\' Road, Akoka Yaba Lagos State'
 # print(address[0:10:2])
 # print(address.upper())
 # print(address.lower())

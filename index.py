@@ -200,9 +200,9 @@ fruit = ['grape', 'apple', 'mango', 'banana', 'coconut', 'pineapple']
 # print(f'{string1} {string2}')
 
 
-my_var = [10, 30, ['digital', ['fortress', 'software devgelopment',['data analysis', ['mango'], 'banana'], 'water melon'], 'frontend'], 50, 70, 90]
-print(my_var[2][1][2][1][0])
-# print(my_var[5])
+# my_var = [10, 30, ['digital', ['fortress', 'software devgelopment',['data analysis', ['mango'], 'banana'], 'water melon'], 'frontend'], 50, 70, 90]
+# print(my_var[2][1][2][1][0])
+# # print(my_var[5])
 # print(my_var[2][0])
 # print(my_var[2][1][3])
 # print(my_var[2][2])
@@ -606,31 +606,316 @@ print(my_var[2][1][2][1][0])
 # print('Programme successfully executed')
 
 
-def my_score():
+# def my_score():
     
-        score = 0
-        try:
-            score = int(input("Enter your score"))
-        except Exception as e:
-             return e
-        except ValueError:
-            print("Enter a valid number")
-        except TypeError:
-            print("Make it a number")
-        match score:
-            case score if 90 <= score <= 100:
-                print("Excellent")
-            case score if 70 <= score <= 89:
-                print("Good Result")
-            case score if 40 <= score <= 69:
-                print("Grade C")
-            case score if 30 <= score <= 39:
-                print("Fail")
-            case score:
-                print("Unknown")
+#         score = 0
+#         try:
+#             score = int(input("Enter your score"))
+#         except Exception as e:
+#              return e
+#         except ValueError:
+#             print("Enter a valid number")
+#         except TypeError:
+#             print("Make it a number") 
+#         match score:
+#             case score if 90 <= score <= 100:
+#                 print("Excellent")
+#             case score if 70 <= score <= 89:
+#                 print("Good Result")
+#             case score if 40 <= score <= 69:
+#                 print("Grade C")
+#             case score if 30 <= score <= 39:
+#                 print("Fail")
+#             case score:
+#                 print("Unknown")
 
-my_score()
-print('successfull')
+# my_score()
+# print('successfull')
+
+# print("Welcome to Zenith Bank PLC")
+# name = input('Enter your name: ')
+# gender = input("Enter your gender (M for male and F for female)")
+# if gender.upper() == 'M':
+#     print(f'Good day Mr {name}')
+# else:
+#     print(f"good day Miss/Mrs {name}")
+# pin=1234
+
+# try:
+#     my_pin = int(input('Please enter your pin: '))
+#     if my_pin == pin:
+#         print('Welcome')
+#     else:
+#         print('Your pin is invalid')
+#         quit()
+# except ValueError:
+#     print('This value must be an interger value')
+#     quit()
+
+
+# balance = 0
+# while True:
+#     choice = input('''
+#         B is to check for balance
+#         D is to deposite fund/money
+#         w is to withdraw money
+#         Q is to quit
+#     ''')
+#     if choice.upper() == 'B':
+#         print(f"Your current balance is {balance}")
+#     elif choice.upper() == 'D':
+#         try:
+#             amount= int(input("Enter your amount of deposite: "))
+#             if amount <= 0:
+#                 print("Invalid Transaction")
+#             else:
+#                 balance += amount
+#                 print(f"Your transaction was successfull and your current balance is {balance}")
+#         except ValueError:
+#             print("Must be an interger value")
+            
+#     elif choice.upper() == "W":
+#         try:
+#             amount=int(input('Enter amount to0 withdraw:  '))
+#             if amount > balance:
+#                 print("Insufficient fund")
+#             elif amount <= 0:
+#                 print('Invalid Transaction')
+#             else:
+#                 balance -= amount
+#                 print(f"Your transaction is successfull and your current balance is {balance}")
+#         except ValueError:
+#             print("This must be and interger value")
+#     elif choice.upper() == 'Q':
+#         question = input("Would you like to perform another transaction  (Y/N)")
+#         if question.upper() == "Y":
+#             continue
+#         else:
+#             print("Thanks for you patronage we hope to see you some other time")
+#             break
+
+#     else:
+#         print("Your Entry is Invalid please try again")
+        # quit()
+    
+
+# anonymous lambda
+
+# x = lambda tunde: tunde + 10
+# print(x(3))
+
+# x = lambda w, t: w + t
+# print(x(10, 20))
+
+# def tunde(x):
+#     return lambda a: a * x
+# myfunc= tunde(4)
+# print(myfunc(20))
+
+
+# module
+# def tunde(x):
+#     return x ** 2
+
+# file handling
+
+# myfile = open('demo.txt', 'a')
+# myfile.write('Welcome to python class')
+# myfile.close()
+
+# x = open('demo.txt', 'r')
+# print(x.read())
+
+# import datetime
+
+# x = datetime.datetime.now()
+# print(x.time())
+
+
+# OOP
+
+
+class Person:
+    def __init__(self, name, age, ):
+        self.name = name
+        self.age = age
+
+
+    def __str__(self):
+        return f' My name is {self.name}  and  I am {self.age} years old'
+    
+    # def myself(self):
+    #     return f'Mr {self.name} is currently seeking for an employment , he is {self.age} years'
+
+# pers0n1 = Person('Emeka', 10)
+# print(pers0n1)
+
+
+# class Employee(Person):
+#     def __init__(self, name, age, email, dob, job_title):
+#         super().__init__(name, age)
+#         self.dob = dob
+#         self.email = email
+#         self.job_title = job_title
+
+#     def __str__(self):
+#         return f'{self.name} {self.age} {self.email} {self.dob} {self.job_title}'
+    
+#     def get_name(self):
+#         return f"My name is {self.name}"
+
+# pers0n1 = Employee('Emeka', 10, 'emeka@gmail.com', 1992, 'python developer')
+# print(pers0n1.get_name())
+
+# # person1 = Person('Titi', 10)
+# # print(person1)
+# x = Employee('Emake', 20, 'emaka@gmail.com', '13, August 2024', 'python developer')
+# print(x.get_name())
+
+
+
+
+# class Lorry:
+#     def __init__(self, brand, color, size):
+#         self.brand = brand
+#         self.color = color
+#         self.size = size
+
+#     def __str__(self):
+#         return f'The brand of the lorry is {self.brand} which has the color of {self.color} and it is {self.size} long'
+
+
+# class Driver(Lorry):
+#     def __init__(self, brand, color, size, name, city, qualification, experience):
+#         super().__init__(brand, color, size)
+#         self.name = name
+#         self.city = city
+#         self.qualification = qualification
+#         self.experience = experience
+
+#     def __str__(self):
+#         return f'The brand of the lorry is {self.brand} which has the color of {self.color} and it is {self.size} long The company has just employ a new driver whose name is  {self.name} he hails from the city of {self.city}, his qualification is {self.qualification} with {self.experience} of experience'
+
+
+# # first_lorry= Lorry('DAF', 'Silver', '40ft')
+# new_driver = Driver('DAF', 'Silver', '40ft', 'Emeka', 'Abia','HND in Logistic', 10 )
+# print(new_driver)
+
+        
+
+# class Car:
+#     def __init__(self, model, name, year):
+#         self.model=model
+#         self.name = name
+#         self.year = year
+#     def tunde(self):
+#         return("Drive")
+#     def my_machine(self):
+#         return f'{self.model} {self.name} {self.year}'
+# class Boat:
+#     def __init__(self, model, name, year):
+#         self.model=model
+#         self.name = name
+#         self.year = year
+#     def tunde(self):
+#         return("Swim")
+#     def my_machine(self):
+#         return f'{self.model} {self.name} {self.year}'
+
+# class Plane:
+#     def __init__(self, model, name, year):
+#         self.model=model
+#         self.name = name
+#         self.year = year
+#     def tunde(self):
+#         return("Fly")
+#     def my_machine(self):
+#         return f'{self.model} {self.name} {self.year}'
+    
+# first_car = Car('Camry', 'Toyota', 2022)
+# # print(first_car.my_machine())
+# first_boat = Boat('Fly-ng Boat', 'Benz', 2002)
+# # print(first_boat.my_machine())
+# first_plane = Plane('Jet', 'Bugatti', 2024)
+# # print(first_plane.my_machine())
+
+# for x in ( first_boat, first_car, first_plane ):
+#    print( x.tunde())
+
+from tkinter import *
+# root = Tk()
+# mylabel = Label(root, text='Hello World')
+# root.geometry('600x600')
+# mylabel.pack()
+# root.mainloop()
+
+
+# root= Tk()
+# mylabel1 = Label(root, text='Welcome to our GUI interface')
+# mylabel2 = Label(root, text="we are in Digital Fortress")
+# mylabel3 = Label (root, text="We are learning with python")
+# root.geometry('400x500')
+
+# # mylabel1.pack()
+# # mylabel2.pack()
+# # mylabel3.pack()
+
+# mylabel1.grid(row=0, column=0)
+# mylabel2.grid(row=0, column=2)
+# mylabel3.grid(row=0, column=3)
+# root.mainloop()
+
+# root= Tk()
+# root.geometry('300x200')
+
+# def my_click():
+#     mylabel = Label(root, text='You just clicked me')
+#     mylabel.pack()
+# mybutton = Button(root, text='Click Me', fg='blue', bg='green', command=my_click)
+# mybutton.pack()
+# root.mainloop()
+
+# root= Tk()
+# my_input= Entry(root, width=50, bg='blue', borderwidth=5)
+# my_input.insert(0, "Enter your name")
+# my_input.pack()
+# def my_click():
+#     hello = "Hello " +my_input.get()
+#     my_label = Label(root, text=hello)
+#     my_label.pack()
+# mybutton = Button(root, text='Click Me', fg='blue', bg='green', command=my_click)
+# mybutton.pack()
+# root.mainloop()
+
+root = Tk()
+root.geometry('600x400')
+first_name = Label(root, text="First Name")
+first_name_input = Entry(root, width=50, bg='white', borderwidth=5)
+
+last_name = Label(root, text="Last Name")
+last_name_input = Entry(root, width=50, bg='white', borderwidth=5)
+
+
+phone_number = Label(root, text="Phone Number")
+phone_number_input = Entry(root, width=50, bg='white', borderwidth=5)
+
+first_name.grid(row=0, column=0)
+first_name_input.grid(row=0, column=1)
+
+last_name.grid(row=1, column=0)
+last_name_input.grid(row=1, column=1)
+
+phone_number.grid(row=2, column=0 )
+phone_number_input.grid(row=2, column=1 )
+
+
+root.mainloop()
+
+
+
+
+
+
 
 
 
